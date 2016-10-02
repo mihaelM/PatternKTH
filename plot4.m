@@ -20,14 +20,14 @@ ylabel('Frequency/Hz')
 subplot('223')
 imagesc(mfccs1);
 colorbar; axis xy;  
-title(sprintf('%s cepstogram', name1));
+title(sprintf('%s cepstrogram', name1));
 xlabel('Time/s')
 ylabel('Cepstral coefficients')
 
 subplot('224')
 imagesc(mfccs2);
 colorbar; axis xy;  
-title(sprintf('%s cepstogram', name2));
+title(sprintf('%s cepstrogram', name2));
 xlabel('Time/s')
 ylabel('Cepstral coefficients')
 
