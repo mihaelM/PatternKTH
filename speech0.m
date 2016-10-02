@@ -29,12 +29,15 @@ plotPrimitive('Music', data_music, fs_music);
 plotSpectogram('Woman', spectogram_fem);
 plotSpectogram('Music', spectogram_music);
 
+%plotPrimitiveMFCCS('Woman mfccs', mfccs_fem, t_fem); %u
+%plotPrimitiveMFCCS('Music mfccs', mfccs_music, t_music);
+
 plotParalel('Woman', spectogram_fem, mfccs_fem_n);
 plotParalel('Music', spectogram_music, mfccs_music_n);
 
-plotParalelRaw('Woman', t_fem, spectogram_fem, mfccs_fem); %alternate with mfccs_fem_n
-%plotParalelRaw('Man', t_male, f_male, spectogram_male, mfccs_male);
-plotParalelRaw('Music', t_music, spectogram_music, mfccs_music);
+%comparison of spectogram with mfccs raw values
+plotParalelRaw('Woman', t_fem, spectogram_fem, mfccs_fem); 
+plotParalelRaw('Music', t_music, spectogram_music, mfccs_music); 
 
 plot4('Man', 'Woman', spectogram_male, mfccs_male_n, spectogram_fem, mfccs_fem_n);
 
