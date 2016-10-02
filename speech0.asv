@@ -26,8 +26,8 @@ mfccs_music_n = normM (mfccs_music, length(t_music));
 plotPrimitive('Woman', data_fem, fs_fem);
 plotPrimitive('Music', data_music, fs_music);
 
-plotSpectogram('Woman', spectogram_fem);
-plotSpectogram('Music', spectogram_music);
+plotParalel('Woman', spectogram_fem, mfccs_fem_n);
+plotParalel('Music', spectogram_music, mfccs_music_n);
 
 plotParalel('Woman', spectogram_fem, mfccs_fem_n);
 plotParalel('Music', spectogram_music, mfccs_music_n);

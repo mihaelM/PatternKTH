@@ -1,9 +1,9 @@
-function [] = plotParalelRaw(name, t_res, f_res, spectogram, mfccs)
+function [] = plotParalelRaw(name, t_res, spectogram, mfccs)
 
 figure();
 
 subplot('211')
-imagesc(t_res, f_res, 10*log10(spectogram));
+imagesc(10*log10(spectogram));
 colorbar; axis xy;  
 title(sprintf('%s spectogram', name));
 xlabel('Time/s')
