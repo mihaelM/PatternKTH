@@ -1,5 +1,5 @@
 function [] = plotPrimitive (name, data, fs)
-
+%plots function of sound given data (amplitude) and frequncy of sampling
 % t = real time => N = sample => t = NT => t = N*(1/fs)
 
 figure();

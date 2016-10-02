@@ -1,4 +1,5 @@
 function [] = plot4 (name1, name2, spectra1, mfccs1,spectra2, mfccs2)
+%plots in manner intended to use as bellow
 %fst row man + woman spectra
 %snd row man + woman cepstra
 figure();
