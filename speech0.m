@@ -43,16 +43,16 @@ plotParalelRaw('Music', t_music, spectrogram_music, mfccs_music);
 plot4('Man', 'Woman', spectrogram_male, mfccs_male_n, spectrogram_fem, mfccs_fem_n);
 
 % We choose music signal
-
+% try with female
 %correlations coefficients between the different spectral or cepstral coefficient time series 
 %so that means we have to invert matrix
-spectral_corr = corr(10*log10(spectrogram_music'));
+spectral_corr = corr(10*log10(spectrogram_fem'));
 figure();
 imagesc(abs(spectral_corr));
 colormap gray; colorbar();
 title('Correlation of spectral coefficients');
 
-cepstra_corr = corr(mfccs_music_n');
+cepstra_corr = corr(mfccs_fem_n');
 figure();
 imagesc(abs(cepstra_corr));
 colormap gray; colorbar();

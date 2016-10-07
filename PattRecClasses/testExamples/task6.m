@@ -13,6 +13,8 @@ pDgen(2)=GaussD('Mean',0,'StDev',2);
 
 hmm = HMM(mc, pDgen);
 
+display(properties(mc));
+
 sum = 0;
 a = zeros(examples,1);
 for i=1:examples
