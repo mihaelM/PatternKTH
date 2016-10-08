@@ -11,7 +11,8 @@ X = [-0.2 2.6 1.3];
 
 [p1, logS1] = pDgen(1).prob(X);
 [p2, logS2] = pDgen(2).prob(X);
-
+%display(p1);
+%display(logS1);
 [alfaHat, c] = forward(mc, [p1*exp(logS1); p2*exp(logS2)]);
 
 display(alfaHat);
