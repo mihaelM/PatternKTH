@@ -28,7 +28,6 @@
 
 function logP=logprob(hmm,x)
 hmmSize=size(hmm);%size of hmm array
-%display(hmmSize);
 T=size(x,2);%number of vector samples in observed sequence
 logP=zeros(hmmSize);%space for result
 for i=1:numel(hmm)%for all HMM objects
@@ -37,14 +36,14 @@ for i=1:numel(hmm)%for all HMM objects
     %
     mc = hmm(i).StateGen;
     pOut = hmm(i).OutputDistr;
-    lenHMM = length(pOut);
     
-    bMat = zeros(lenHMM, T);
+    bMat = zeros(, length(pOut));
     
-    for k = 1:lenHMM
+    for k = 1:length(pOut)
        [pp, logS] = pOut(k).prob(x);
        bMat(k, :) = pp * exp(logS);
     end
+    
     
     [~, c] = forward(mc, bMat);
     

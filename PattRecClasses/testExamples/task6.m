@@ -11,9 +11,12 @@ examples = 10000;
 pDgen(1)=GaussD('Mean',0,'StDev',1);
 pDgen(2)=GaussD('Mean',0,'StDev',2);
 
+t = pDgen(1);
+diplay(t.rand(2));
+
 hmm = HMM(mc, pDgen);
 
-display(properties(mc));
+display(properties(hmm));
 
 sum = 0;
 a = zeros(examples,1);
